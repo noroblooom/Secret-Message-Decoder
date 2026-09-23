@@ -1,10 +1,16 @@
 # Secret Message Decoder
 
-A small C# project that reads a text file containing coordinate-based block characters and reconstructs the hidden message in the terminal.
+A small C# console application that reads a text file of coordinate-based block characters and reconstructs the hidden message in the terminal.
 
 ## What it does
 
-The program reads a file like this:
+The program reads lines formatted like this:
+
+```text
+x symbol y
+```
+
+For example:
 
 ```text
 0 █ 4
@@ -16,24 +22,16 @@ The program reads a file like this:
 ...
 ```
 
-Each line follows the format:
+The decoder then:
 
-```text
-x symbol y
-```
-
-The decoder:
-
-- parses the coordinates
+- parses each coordinate entry
 - builds a 2D character grid
-- flips the Y-axis so the message renders correctly
-- prints the final message to the console
+- flips the Y-axis so the output appears correctly on screen
+- prints the decoded message to the terminal
 
-## Example
+## Prerequisites
 
-The default example file is `hello.txt`.
-
-When run, it generates a `HELLO` message in block characters.
+- .NET SDK
 
 ## Run it
 
@@ -43,21 +41,26 @@ From the project folder:
 dotnet run
 ```
 
+## Demo
+
+![Decoded HELLO output in the terminal](image-1.png)
+
 ## File structure
 
-- `Program.cs` – starts the decoder with the sample file
-- `SecretMessageDecoder.cs` – parses the file and renders the decoded grid
-- `hello.txt` – example encoded message
+- `Program.cs` – starts the decoder using the sample file
+- `SecretMessageDecoder.cs` – parses the coordinates and renders the grid
+- `hello.txt` – sample encoded message
+- `README.md` – project overview and usage instructions
 
 ## Notes
 
-This project is a simple interview-style coding exercise designed to show:
+This project is a simple interview-style coding exercise designed to demonstrate:
 
 - coordinate parsing
-- grid reconstruction
+- 2D grid reconstruction
 - terminal rendering
-- troubleshooting Unicode output in Windows consoles
+- Unicode output handling in Windows terminals
 
 ## License
 
-This project is provided for educational and portfolio use.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
