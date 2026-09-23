@@ -33,7 +33,7 @@ The decoder:
 
 The default example file is `hello.txt`.
 
-When run, it generates the `HELLO` message in block characters.
+When run, it generates a `HELLO` message in block characters.
 
 ## Run it
 
