@@ -43,7 +43,7 @@ dotnet run
 
 ## Demo
 
-![Decoded HELLO output in the terminal](image-1.png)
+![Decoded HELLO output in the terminal](image.png)
 
 ## File structure
 
